@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>radhika joshi</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<style>
+		marquee
+		{
+		font-size: 50px;
+		font-weight: 800;
+		color: black;
+		font-family: sans-serif;
+		width: 610px;
+		background-color: orange;
+		}
+		</style>
+
+		<style>
+		#clock
+		{
+		color: white;
+		font-family: 'Orbitron' , sans-serif;
+		font-size: 70px;
+		padding-top: 20px;
+		padding-bottom: 40px;
+		}
+		</style>
+	</head>
+	<body>
+	<header>
+		<div class="row">
+		<ul class="main-nav">
+		//<li class="active"><a href="A-MAIN.html">home</a></li>
+		//<li class="active"><a href="current-time.html">current time & date</a></li>
+		<li class="active"><a href="alarm.html ">set time</a></li>
+		<li class="active"><a href=" feedback.html">feedback</a></li>
+		
+		</ul>
+		</div>
+
+		<div class="time">
+		<h1>TIME MANAGEMENT IS LIFE MANAGEMENT..!</h1>
+		</div>
+
+		<marquee>ONE DAY OR DAY ONE YOU DECIDE...!</marquee>
+		<script>
+		function digclock()
+		{
+		var d = new Date()
+		var t = d.toLocaleTimeString()
+		document.getElementById("clock").innerHTML = t
+		}
+		setInterval(function(){digclock()},1000)
+		</script>
+		Digital Clock
+		<div id="clock">
+		</div>
+
+	</header>
+	</body>
+</html>

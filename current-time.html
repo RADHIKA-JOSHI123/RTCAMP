@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<link href="date-timestyle.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header style="text-align: center; color: white; font-size: 100px; ">
+		<p>CURRENT DATE & TIME</p>
+		
+		<script >
+		Date.prototype.getCurrentTime = function()
+		{
+			return ((this.getHours() < 10)?"0":"") + ((this.getHours()>12)?(this.getHours				()-12):this.getHours()) +":"+ ((this.getMinutes() < 10)?"0":"") + 						this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds() + 				((this.getHours()>12)?(' PM'):' AM');
+		};
+
+			var today = new Date(); //date object
+			var current_date = today.getDate();
+			var current_month = today.getMonth()+1; //Month starts from 0
+			var current_year = today.getFullYear();
+			var current_time = today.getCurrentTime();
+			document.write(current_date+"/"+current_month+"/"+current_year+' - 					'+current_time);
+
+
+		</script>
+		</header>
+	</body>
+</html>
+
+
